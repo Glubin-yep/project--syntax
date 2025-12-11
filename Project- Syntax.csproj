@@ -5,4 +5,8 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>ProjectSyntax</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="_Game\Resources\" />
+    <Folder Include="_Game\Scenes\" />
+  </ItemGroup>
 </Project>
