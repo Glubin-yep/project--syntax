@@ -1,13 +1,8 @@
-﻿<Project Sdk="Godot.NET.Sdk/4.5.1">
+<Project Sdk="Godot.NET.Sdk/4.5.1">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>ProjectSyntax</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="_Game\Scenes\" />
-    <Folder Include="_Game\Scripts\Controllers\" />
-    <Folder Include="_Game\Scripts\Resources\" />
-  </ItemGroup>
 </Project>

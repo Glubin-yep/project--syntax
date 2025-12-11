@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Project: Syntax"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+run/main_scene="uid://ynbfmym57wwa"
+config/features=PackedStringArray("4.5", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameService="*res://_Game/Scripts/Autoload/GameService.cs"
 
 [dotnet]
 

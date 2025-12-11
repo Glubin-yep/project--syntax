@@ -1,10 +1,8 @@
-# Godot 4+ specific
 .godot/
 /android/
 /ios/
 *.translation
 
-# C# / .NET / Visual Studio specific (Це виправить твою помилку)
 .vs/
 bin/
 obj/
@@ -12,6 +10,5 @@ obj/
 *.sln.docstates
 *.pdb
 
-# Mono-specific (якщо раптом з'являться)
 .mono/
 data_*/

@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=3 uid="uid://ynbfmym57wwa"]
+
+[ext_resource type="Script" uid="uid://ppw5bdqhoe44" path="res://_Game/Scripts/Controllers/TopBar.cs" id="2_d0hlt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8xyd7"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_d0hlt"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_qscq8"]
+font_size = 24
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_8xyd7"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopPanel" type="Panel" parent="." node_paths=PackedStringArray("MoneyLabel", "DateLabel", "TimeLabel", "PauseButton", "BtnSpeed1", "BtnSpeed2", "BtnSpeed4")]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("2_d0hlt")
+MoneyLabel = NodePath("Layout/MoneyLabel")
+DateLabel = NodePath("Layout/DateLabel")
+TimeLabel = NodePath("Layout/TimeLabel")
+PauseButton = NodePath("Layout/SpeedControls/PauseButton")
+BtnSpeed1 = NodePath("Layout/SpeedControls/BtnSpeed1")
+BtnSpeed2 = NodePath("Layout/SpeedControls/BtnSpeed2")
+BtnSpeed4 = NodePath("Layout/SpeedControls/BtnSpeed3")
+
+[node name="Layout" type="HBoxContainer" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="MoneyLabel" type="Label" parent="TopPanel/Layout"]
+layout_mode = 2
+text = "10 000 $"
+label_settings = SubResource("LabelSettings_8xyd7")
+
+[node name="Spacer" type="Control" parent="TopPanel/Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DateLabel" type="Label" parent="TopPanel/Layout"]
+layout_mode = 2
+text = "10.02.5000"
+label_settings = SubResource("LabelSettings_d0hlt")
+
+[node name="TimeLabel" type="Label" parent="TopPanel/Layout"]
+layout_mode = 2
+text = "12:00"
+label_settings = SubResource("LabelSettings_qscq8")
+
+[node name="SpeedControls" type="HBoxContainer" parent="TopPanel/Layout"]
+layout_mode = 2
+
+[node name="PauseButton" type="Button" parent="TopPanel/Layout/SpeedControls"]
+layout_mode = 2
+text = "||"
+
+[node name="BtnSpeed1" type="Button" parent="TopPanel/Layout/SpeedControls"]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_8xyd7")
+text = "x1"
+
+[node name="BtnSpeed2" type="Button" parent="TopPanel/Layout/SpeedControls"]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_8xyd7")
+text = "x4"
+
+[node name="BtnSpeed3" type="Button" parent="TopPanel/Layout/SpeedControls"]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_8xyd7")
+text = "x8"
