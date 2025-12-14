@@ -9,4 +9,7 @@
     <Folder Include="_Game\Resources\" />
     <Folder Include="_Game\Scenes\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="_game\scenes\ProjectStatusPanel.tscn" />
+  </ItemGroup>
 </Project>

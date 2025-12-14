@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ynbfmym57wwa"]
+[gd_scene load_steps=9 format=3 uid="uid://ynbfmym57wwa"]
 
 [ext_resource type="Script" uid="uid://ci2oxbn14v3b0" path="res://_Game/Scripts/Controllers/MainSceneController.cs" id="1_d0hlt"]
 [ext_resource type="Script" uid="uid://ppw5bdqhoe44" path="res://_Game/Scripts/Controllers/TopBar.cs" id="2_d0hlt"]
 [ext_resource type="PackedScene" uid="uid://c7r3vytithl16" path="res://_Game/Scenes/CreateGameWindow.tscn" id="2_qscq8"]
+[ext_resource type="PackedScene" path="res://_Game/Scenes/ProjectStatusPanel.tscn" id="4_j82jd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8xyd7"]
 font_size = 24
@@ -108,3 +109,16 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "New Game"
+
+[node name="ProjectStatusPanel" parent="." instance=ExtResource("4_j82jd")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7821181
+anchor_top = 0.125
+anchor_right = 0.9991319
+anchor_bottom = 0.61728394
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true

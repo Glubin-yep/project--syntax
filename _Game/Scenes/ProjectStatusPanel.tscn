@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://_Game/Scripts/Controllers/ProjectStatusPanel.cs" id="1_script"]
+
+[node name="ProjectStatusPanel" type="PanelContainer" node_paths=PackedStringArray("ProjectNameLabel", "ProgressBar", "StatsLabel")]
+custom_minimum_size = Vector2(250, 0)
+offset_right = 250.0
+offset_bottom = 150.0
+script = ExtResource("1_script")
+ProjectNameLabel = NodePath("MarginContainer/VBoxContainer/ProjectNameLabel")
+ProgressBar = NodePath("MarginContainer/VBoxContainer/ProgressBar")
+StatsLabel = NodePath("MarginContainer/VBoxContainer/StatsLabel")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HeaderLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+text = "ACTIVE PROJECT"
+horizontal_alignment = 1
+
+[node name="ProjectNameLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Project Name"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+step = 0.1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatsLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Gameplay: 0
+Graphics: 0
+Sound: 0
+Bugs: 0"
